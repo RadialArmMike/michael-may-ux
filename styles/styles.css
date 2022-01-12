@@ -1,0 +1,173 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Source Sans Pro', verdana, sans;
+  color: #7f8d8c;
+  margin: 0px;
+  border: 20px solid #24282d;
+  padding: 60px;
+  }
+
+h1 {
+  font: 700 3.5em/0.75em 'Hind Siliguri', sans;
+  text-align: center;
+  text-transform: uppercase;
+  color: #24282d;
+  padding: 0;
+  margin: 0;
+  }
+
+h2{
+  font: 700 1.75em/2em 'Source Sans Pro', sans;
+  text-align: center;
+  text-transform: uppercase;
+  color: #24282d;
+  padding: 0;
+  margin: 0;
+  }
+
+h3{
+  font: bold 1.5em/1.5em 'Source Sans Pro', sans;
+  text-transform: uppercase;
+  color: #24282d;
+  padding: 0;
+  margin: 0;
+  }
+
+h4{
+  font: bold 1.25em/1.5em 'Source Sans Pro', sans;
+  color: #24282d;
+  padding: 0;
+  margin: 0;
+  }
+
+p, li {
+  font: 400 1.25em/1.5em 'Source Sans Pro', sans;
+  color: #7f8d8c;
+  }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  border: 1px solid #7f8d8c;
+  }
+
+hr {
+  width: 50%;
+  border: 1px solid #000000;
+  margin-bottom: 40px;
+  }
+
+.tagline {
+  font: italic 400 1.25em/0.75em 'PT Serif Caption italic', sans;
+  color: #7f8d8c;
+  text-align: center;
+  text-transform: capitalize;
+  }
+
+.image-caption {
+      font: italic 400 1.25em/1.5em 'PT Serif Caption italic', sans;
+      color: #7f8d8c;
+      text-align: center;
+  }
+
+.tag {
+  font: italic 400 0.9em/1.5em 'PT Serif Caption italic', sans;
+  color: #7f8d8c;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  }
+
+.center {
+  text-align: center;
+  }
+
+
+.header-rule {
+  width: 90%;
+  margin-bottom: 10px;
+  }
+
+
+.no-border {
+  border: 0;
+}
+
+.space-top {
+	margin-top: 20px
+}
+
+.space-bottom {
+	margin-bottom: 20px
+}
+
+.size-med {
+  width: 500px;
+}
+
+.logo-end-bug {
+  width: 100px;
+  height: 100px;
+  border: 0;
+}
+
+
+.portfolio-list {
+  margin: 0
+  display: block;
+}
+
+.portfolio-item {
+  text-align: center;
+  width: 33%;
+  margin: 0px 0px 2em 0px;
+  padding: 0;
+  display: inline-block;
+}
+
+
+/* Test centered Nav menu per w3schools */
+/* Style the navigation menu */
+.navbar {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  overflow: auto;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  color: #24282d;
+  text-decoration: none;
+  font: 700 1em/1.5em 'Source Sans Pro', sans;
+  width: 16%; /* Equal-width links are not working due to some body level formatting. Should be 20% for 5 equal-width links */
+  text-align: center; /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  background-color: #cccccc;
+}
+
+/* Style the current/active link */
+.navbar a.active {
+  color: #B42E2A;
+  border-bottom: 2px solid #B42E2A;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 750px) {
+.navbar a {
+  float: none;
+  display: block;
+  width: 100%;
+  text-align: left; /* If you want the text to be left-aligned on small screens */
+}
+
+}

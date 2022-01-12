@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Michael May UX - Interaction Work</title>
+  <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:700|PT+Serif+Caption|Source+Sans+Pro:400,400i,700,700i&display=swap" rel="stylesheet">
+
+  <!--Source Sans Pro 400 reg, 400 italic, 700 bold, 700 bold italic-->
+  <!--PT Serif Caption 400 reg, 400 italic-->
+  <!--Hind Siliguri 700-->
+
+  <link rel="stylesheet" href="../styles/styles.css">
+
+</head>
+
+<body>
+
+  <h1>MICHAEL MAY UX</h1>
+  <hr class="header-rule"/>
+  <h2 class="tagline">User Experience & Visual Design in the Milwaukee Area</h2>
+
+  <!--Main menu appears on all pages-->
+  <!--End of header-->
+
+  <!--Centered nav per w3school-->
+    <div class="navbar">
+      <a href="../index.html">HOME</a>
+      <a href="design-ops.html">DESIGN OPS</a>
+      <a href="ia.html">IA</a>
+      <a class="active" href="#">INTERACTION</a>
+      <a href="visual.html">VISUAL</a>
+      <a href="research.html">RESEARCH</a>
+    </div>
+
+
+
+  <h2 id="interaction-top">
+INTERACTION WORK    <!--Page title-->
+  </h2>
+
+    <hr/>
+
+  <div class="portfolio-list">   <!--Begin featured portfolio items-->
+
+    <a href="#interaction-table-prototypes">
+      <div class="portfolio-item">
+        <img src="../images/interaction-table-ftr-840x700.png" alt="table prototypes thumbnail image"/>
+        <h3 class="center">TABLE PROTOTYPES</h3>
+        <p class="tag">interaction, testing</p>
+      </div>
+    </a>
+
+  <a href="#interaction-interaction-spec">
+    <div class="portfolio-item">
+      <img src="../images/interaction-spec-ftr-840-x700.png" alt="interaction specification thumbnail image"/>
+      <h3 class="center">INTERACTION SPEC</h3>
+      <p class="tag">interaction, design ops</p>
+    </div>
+  </a>
+
+  </div>   <!--End featured portfolio items-->
+
+  <hr/>
+
+<!--Start Interaction portfolio item 1-->
+
+  <img id="interaction-table-prototypes" src="../images/interaction-tables-horiz-full.png" alt="horizontal table prototype"/>
+  <h3 class="center">TABLE PROTOTYPES</h3>
+  <p class="tag">interaction, testing</p>
+
+
+    <p>One of the most commonly accessed areas of our claims processing software is claim history. Data needs on these screens can vary widely according to role, but nearly all roles share one need – to view bill line details on a claim.</p>
+
+    <h4>Table-Zilla</h4>
+
+      <p>Claim history at the bill line level is displayed within a table – these tables are some of the most complex in the application. Each claim can accommodate up to 99 bill lines (rows) and some 27 data points (columns). Initial screen layouts focused on the new requirement to display many bill lines per claim (the 99 rows). These layouts resulted bill line data laid out horizontally, and users were required to scroll horizontally to view complete data for any given bill line. Time was lost navigating to needed data, and the negative effect on production in pre-release testing was substantial. These tables were prime targets for alternative layouts.</p>
+
+      <img src="../images/interaction-tables-horiz-full.png" alt="current state horizontal bill line table showing differing data needs by role"/>
+      <p class="image-caption">Current (horizontal) Bill Line Table - In testing, this design served as our control to establish baseline speed of user loops during testing. A series of brief interviews revealed different needs for different user roles within the tables. This made the obvious solution of simply prioritizing the most commonly used data points unhelpful.</p>
+
+      <p>I started by doing a little research, which showed that most claims contained few bill lines, with an average of just 1.6 per claim. In fact, 98% of claims have four bill lines or fewer. The requirement to accommodate up to 99 had been written in to address a pain point that was a real, but rare, occurrence. This suggested our focus on displaying many bill lines was misguided. I flipped the table to display bill lines vertically down columns, which offered a more complete view of bill line data. Fewer bill lines would be visible at a time, but some 17 data points displayed for 4 bill lines before the user needed to scroll in either direction. This seemed preferable to the original design, which displayed up to 10 bill lines but only only 5 data points for each before horizontal scroll was necessary to view more data.</p>
+
+      <img src="../images/interaction-table-vert-use-1272.png" alt="current and alternate vertical bill line table designs showing differing data need by role"/>
+      <p class="image-caption">Current (horizontal) vs Alternate (vertical) Bill Line Tables - This illustration shows the differing data needs by role, and the locatio  of those needs in each table design. The alternate table nearly doubled users' productive time in Claim History tests.</p>
+
+    <h4>The Prototypes</h4>
+
+      <p>The next step was to build prototypes and subject them to A/B testing. Starting with a library that a co-worker had built, I assembled high-fidelity Axure prototypes pitting the original horizontal bill line tables against the new vertical design. I needed to simulate a search in Claim History that returned a list of results, with complex and variable data attached to each result. This required some advanced Axure prototyping, including creation of synthetic data, adding the data to Axure repeaters and mapping the repeater data to columns.</p>
+
+      <img src="../images/interaction-tables-synth-data.png" alt="synthetic data for the bill line table prototypes"/>
+      <p class="image-caption">Synthetic data was created in Excel and imported loaded into the Axure prototype to simulate the complex data that users encounter.</p>
+
+      <p>During the test, I asked a variety of users to identify data points relevant to their roles. Users were timed and polled with standardized SEQ questions after each test half.</p>
+
+      <p>View the <a href="https://r3oab7.axshare.com" target="_blank">horizontal table prototype</a> (Axure).</p>
+
+      <p>View the <a href="https://t137nz.axshare.com" target="_blank">vertical table prototype</a> (Axure).</p>
+
+      <p>The results showed the new vertical table design allowed users to reduce unproductive time spent scrolling and finding data by nearly half, and increased productive time consuming and reporting that data. This despite the fact that reading down columns was a new visual pattern; the previous claims processing system, in use for decades, had presented bill lines in horizontal rows. The prototype gave us great evidence that retooling bill line tables would be a worthwhile future investment.</p>
+
+    <p class="center"><a href="#interaction-top">Scroll to top of page.</a></p>
+    <br>
+    <hr/>
+    <br>
+
+<!--End Interaction portfolio item 1-->
+
+
+<!--Start Interaction portfolio item 2-->
+
+<h3 id="interaction-interaction-spec" class="center">INTERACTION SPEC</h3>
+<p class="tag">interaction, design ops</p>
+
+      <p>Early in our application-building at UHC we wrote interaction specifications seperately, each based on previous work and covering a custom screen or screen suite. Since custom work progressed relatively slowly, it was easy enough keep pace with design and ahead of development.</p>
+
+      <p>Midway through the project, the first of several modernized waves of screens were released to the design team. Each wave contained 20-ish screens, and additional waves followed every few weeks. We needed a system, both to keep pace with the increasing pace and to standardize for consumption by dev.</p>
+
+    <h4>The Template</h4>
+
+      <p>Using some of our previous specs as a starting point, I designed a kitchen sink style template with placeholder illustrations. The illustrations serve as visual reminders of our obligation to include extras like process flow and short animations for complex behaviors, which were often missed in early specs. It also established a change log I the footer of each spec – critical for tracking evolution.</p>
+
+      <p>An outline of the spec template:</p>
+      <ol>
+        <li>Title with Rally cross-reference</li>
+        <li>Incomplete spec tag (removed when spec has been finished)</li>
+        <li>Representative screen illustration</li>
+        <li>Links to visual designs</li>
+        <li>Any new UI components used</li>
+        <li>User flow diagram</li>
+        <li>Interaction behavior container by container, minus common elements (egg header, footer) in order</li>
+        <li>Assertive messages</li>
+        <li>Navigation from Command Bar</li>
+        <li>Notes & Dependancies</li>
+        <li>Interaction examples (animation, prototype, etc.)</li>
+        <li>Change Log</li>
+    </ol>
+
+    <img class="size-med" src="../images/interaction-spec-1272.png" alt="excerpt from interaction specification template"/>
+
+    <p class="image-caption">The template kept us honest when we were tempted to skip things like user flows and change summaries. Few screens required all items listed, but the template enabled us to start with a complete spec and discard what we didn't need.</p>
+
+    <p class="center"><a href="#interaction-top">Scroll to top of page.</a></p>
+    <br>
+    <br>
+
+<!--End Interaction portfolio item 2-->
+
+    <a href="../index.html">
+    <img class="logo-end-bug" src="../images/michaelmayGD-sig-512x512.png" alt="Michael May logo mark">
+    </a>
+
+</body>
+
+</html>
